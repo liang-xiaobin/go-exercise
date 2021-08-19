@@ -20,7 +20,10 @@ func main() {
 			"message": "pong",
 		})
 	})
-	r.Run(":8888")
+	err := r.Run(":8888")
+	if err != nil {
+		log.Printf("router init err:(%v)", err)
+	}
 }
 
 // printMemStats print runtime info
