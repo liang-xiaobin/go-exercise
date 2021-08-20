@@ -3,6 +3,8 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"log"
+	"net/http"
+	_ "net/http/pprof"
 	"runtime"
 	"time"
 )
@@ -12,6 +14,12 @@ func main() {
 		for {
 			printMemStats()
 			time.Sleep(5 * time.Second)
+		}
+	}()
+	go func() {
+		err := http.ListenAndServe("0.0.0.0:6060", nil)
+		if err != nil {
+			log.Printf("http serve err:(%v)", err)
 		}
 	}()
 	r := gin.Default()
