@@ -6,6 +6,8 @@
 *.dylib
 .idea
 .vscode
+_debug_bin
+go.sum
 
 # Test binary, built with `go test -c`
 *.test
