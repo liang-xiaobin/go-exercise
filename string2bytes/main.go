@@ -38,7 +38,7 @@ func string2bytes1(s string) []byte {
 	return b
 }
 
-// 如果只是期望单纯的转换，对容
+// 如果只是期望单纯的转换，对容量和长度值没要求
 func string2bytes2(s string) []byte {
 	return *(*[]byte)(unsafe.Pointer(&s))
 }
