@@ -9,7 +9,11 @@ import (
 func main() {
 	s := "hello world"
 	v := string2bytes1(s)
+	m := string2bytes2(s)
 	fmt.Println(v)
+	fmt.Println(m)
+	fmt.Println(len(m))
+	fmt.Println(cap(m))
 }
 
 // string2bytes Data作为值拷贝的情况，这就会导致无法保证它所引用的数据不会被垃圾回收(GC)
