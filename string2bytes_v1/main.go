@@ -13,6 +13,7 @@ func StringToByte(key *string) []byte {
 	return b
 }
 
+// main 测试go中踩内存的情况
 func main() {
 	decryptContent := "/AvYEjm4g6xJ3LVrk2/Adk"
 	iv := decryptContent[0:16]
