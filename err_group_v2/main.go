@@ -25,7 +25,7 @@ func main() {
 	}
 	if err := g.Wait(); err == nil {
 		fmt.Println("successfully fetched all urls")
-	}else {
-		fmt.Printf("Errors:%+v",err)
+	} else {
+		fmt.Printf("Errors:%+v", err)
 	}
 }
